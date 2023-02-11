@@ -1,4 +1,70 @@
-:root {
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;1,200;1,300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Kanit', sans-serif;
+  color:#fff;
+}
+
+
+html {
+  --scroll-behavior: smooth!important;
+  scroll-behavior: smooth!important;
+  }
+
+h1,h2,h3,h4,h5,h6{
+  @apply font-bold;
+}
+
+h1{
+  @apply text-5xl;
+}
+
+h2{
+  @apply text-4xl;
+}
+
+h3{
+  @apply text-3xl;
+}
+
+h4{
+  @apply text-2xl;
+}
+
+h5{
+  @apply text-xl;
+}
+
+h6{
+  @apply text-lg;
+}
+
+p{
+  @apply text-base;
+}
+
+@layer components{
+   .nav-manu{
+      @apply w-full border-b-4 border-transparent hover:border-tertiary transition-all ease-in duration-200
+   }
+
+   .nav-manu-active{
+      @apply  w-full border-b-4 border-tertiary
+   }
+
+   .nav-manu-mobile-active{
+    @apply  pl-1 h-[40px] rounded-md bg-tertiary flex items-center  w-full
+ }
+ }
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -71,15 +137,15 @@
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
   }
-}
+} */
 
-* {
+/* * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
+} */
 
-html,
+/* html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
@@ -104,4 +170,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
+} */
