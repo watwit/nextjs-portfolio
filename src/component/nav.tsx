@@ -3,10 +3,9 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { FaFacebook, FaLine, FaPhoneSquareAlt, FaGithub } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
 import { AnimateSharedLayout, motion } from "framer-motion";
 import { navMenuData } from "@/data/nav.data";
+import Social from "./social";
 
 export default function nav() {
   const [nav, setNav] = useState<boolean>(false);
@@ -136,21 +135,7 @@ export default function nav() {
                 Let's Connect :
               </p>
               <div className="flex items-center justify-between my-4 w-full">
-                <div className="cursor-pointer hover:scale-125 ease-in duration-300">
-                  <FaFacebook size={25} color={"#fff"} />
-                </div>
-                <div className="cursor-pointer hover:scale-125 ease-in duration-300">
-                  <FaLine size={25} color={"#fff"} />
-                </div>
-                <div className="cursor-pointer hover:scale-125 ease-in duration-300">
-                  <FaPhoneSquareAlt size={25} color={"#fff"} />
-                </div>
-                <div className="cursor-pointer hover:scale-125 ease-in duration-300">
-                  <MdEmail size={30} color={"#fff"} />
-                </div>
-                <div className="cursor-pointer hover:scale-125 ease-in duration-300">
-                  <FaGithub size={25} color={"#fff"} />
-                </div>
+                <Social />
               </div>
             </div>
           </div>

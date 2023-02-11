@@ -1,8 +1,7 @@
 import React from "react";
-import { FaFacebook, FaLine, FaPhoneSquareAlt, FaGithub } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
+import Social from "./social";
 
 export default function about() {
   return (
@@ -34,21 +33,7 @@ export default function about() {
 
           <div className="hidden lg:flex w-full max-w-[240px] h-[2px] bg-white mt-20"></div>
           <div className="hidden lg:flex items-center justify-between max-w-[240px] py-8">
-            <div className="cursor-pointer hover:scale-125 ease-in duration-300">
-              <FaFacebook size={25} color={"#fff"} />
-            </div>
-            <div className="cursor-pointer hover:scale-125 ease-in duration-300">
-              <FaLine size={25} color={"#fff"} />
-            </div>
-            <div className="cursor-pointer hover:scale-125 ease-in duration-300">
-              <FaPhoneSquareAlt size={25} color={"#fff"} />
-            </div>
-            <div className="cursor-pointer hover:scale-125 ease-in duration-300">
-              <MdEmail size={30} color={"#fff"} />
-            </div>
-            <div className="cursor-pointer hover:scale-125 ease-in duration-300">
-              <FaGithub size={25} color={"#fff"} />
-            </div>
+            <Social />
           </div>
         </div>
         <Image
