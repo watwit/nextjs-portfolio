@@ -2,10 +2,14 @@ import React from "react";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
 import Social from "./social";
+import { motion } from "framer-motion";
 
 export default function about() {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.5, delay: 0.1 }}
       id="about"
       className="bg-primary w-full min-h-screen pt-[80px] sm:h-screen text-center"
     >
@@ -44,6 +48,6 @@ export default function about() {
           alt="Coding Logo"
         ></Image>
       </div>
-    </div>
+    </motion.div>
   );
 }

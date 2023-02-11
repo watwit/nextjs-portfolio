@@ -18,7 +18,8 @@ export default function layout({ children }: LayoutProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <motion.div
+      {children}
+      {/* <motion.div
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
@@ -27,7 +28,7 @@ export default function layout({ children }: LayoutProps) {
         }}
       >
         {children}
-      </motion.div>
+      </motion.div> */}
       <Footer />
     </div>
   );
