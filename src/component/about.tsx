@@ -12,8 +12,10 @@ export default function about() {
     >
       <div className="max-w-[1240px] w-full h-full mx-auto p-4 flex flex-col lg:flex-row justify-center items-center gap-4">
         <div className="lg:text-start order-2 lg:order-none">
-          <h4>Hello, I'm</h4>
-          <h1 className="pt-4 text-tertiary">Watcharawit Yuthong</h1>
+          <h4>Hello, I'm 👋</h4>
+          <h1 className="pt-5 text-tertiary text-4xl lg:text-5xl">
+            Watcharawit Yuthong
+          </h1>
           <h4 className="py-2">
             <Typewriter
               options={{

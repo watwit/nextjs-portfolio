@@ -10,7 +10,6 @@
   padding: 0;
   margin: 0;
   font-family: 'Kanit', sans-serif;
-  color:#fff;
 }
 
 
@@ -48,7 +47,7 @@ h6{
 }
 
 p{
-  @apply text-base;
+  @apply text-base text-quaternary;
 }
 
 @layer components{
@@ -60,9 +59,17 @@ p{
       @apply  w-full border-b-4 border-tertiary
    }
 
+   .nav-manu-mobile{
+    @apply  text-tertiary pl-1 h-[40px] flex items-center w-full rounded-2xl hover:text-secondary hover:bg-white  transition duration-500
+   }
+
    .nav-manu-mobile-active{
-    @apply  pl-1 h-[40px] rounded-md bg-tertiary flex items-center  w-full
- }
+    @apply  pl-1 h-[40px] text-secondary rounded-2xl bg-tertiary flex items-center  w-full
+   }
+
+   .btn-tertiary{
+    @apply bg-tertiary text-secondary rounded-2xl p-2 text-base hover:bg-white transition-all ease-in duration-100
+   }
  }
 /* :root {
   --max-width: 1100px;

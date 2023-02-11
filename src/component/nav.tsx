@@ -6,21 +6,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { FaFacebook, FaLine, FaPhoneSquareAlt, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { AnimateSharedLayout, motion } from "framer-motion";
-
-type NavMenuType = {
-  id: number;
-  name: string;
-  href: string;
-}[];
-
-const navMenuData: NavMenuType = [
-  { id: 1, name: "About", href: "/" },
-  { id: 2, name: "Skill", href: "/#skill" },
-  { id: 3, name: "Education", href: "/#education" },
-  { id: 4, name: "Experience", href: "/#experience" },
-  { id: 5, name: "Projects", href: "/#project" },
-  { id: 6, name: "Contract", href: "/#contract" },
-];
+import { navMenuData } from "@/data/nav.data";
 
 export default function nav() {
   const [nav, setNav] = useState<boolean>(false);
@@ -42,11 +28,11 @@ export default function nav() {
           animate={{ x: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <Link href="/" className="flex items-center gap-1">
+          <Link href="/" className="flex items-center gap-2">
             <Image
               src="/images/code.png"
-              width={40}
-              height={40}
+              width={50}
+              height={50}
               alt="Software Developer Logo"
             />
             <span className="hidden lg:flex self-center text-xl font-semibold whitespace-nowrap">
@@ -83,9 +69,7 @@ export default function nav() {
                 })}
               </div>
             </AnimateSharedLayout>
-            <button className="bg-tertiary p-2 rounded text-base">
-              Download CV
-            </button>
+            <button className="btn-tertiary">Download CV</button>
 
             <div onClick={handleNav} className="lg:hidden">
               <AiOutlineMenu size={25} color={"#fff"} />
@@ -110,8 +94,8 @@ export default function nav() {
           <div className="flex w-full items-center justify-between">
             <Image
               src="/images/code.png"
-              width={40}
-              height={40}
+              width={50}
+              height={50}
               alt="Software Developer Logo"
             />
             <div
@@ -129,7 +113,7 @@ export default function nav() {
                   <Link
                     key={data.id}
                     href={data.href}
-                    className="py-3 flex flex-col relative z-10"
+                    className="py-2 flex flex-col relative z-10"
                   >
                     {selectMenu == data.href ? (
                       <motion.div
@@ -140,7 +124,7 @@ export default function nav() {
                         {data.name}
                       </motion.div>
                     ) : (
-                      <p className="pl-1">{data.name}</p>
+                      <p className="nav-manu-mobile">{data.name}</p>
                     )}
                   </Link>
                 );

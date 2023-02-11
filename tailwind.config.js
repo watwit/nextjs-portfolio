@@ -12,9 +12,10 @@ module.exports = withMT({
   theme: {
     extend: {
       colors:{
-        'primary':'#19142A',
-        'secondary':'#2A2344',
-        'tertiary':'#D5213A'
+        'primary':'#14191f',
+        'secondary':'#29333D',
+        'tertiary':'#E0E6EB',
+        'quaternary':'#A3B3C2'
       }
     }
   },
