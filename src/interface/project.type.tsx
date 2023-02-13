@@ -6,4 +6,4 @@ export type ProjectType = {
   header: string;
   details: string[];
   tools: string[];
-}[];
+};

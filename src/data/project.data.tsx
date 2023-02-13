@@ -1,5 +1,5 @@
 import { ProjectType } from "@/interface/project.type";
-export const projectData: ProjectType = [
+export const projectData: ProjectType[] = [
   {
     id: 1,
     image: "/images/test.jpg",
@@ -181,5 +181,14 @@ export const projectData: ProjectType = [
       "- Intregration technology such as 2D/3D, SVG, Line, SMS and Google Map.",
     ],
     tools: [],
+  },
+  {
+    id: 15,
+    image: "/images/test.jpg",
+    alt: "test",
+    type: "1",
+    header: "PORTFOLIO",
+    details: ["- XXXX"],
+    tools: ["next js", "tailwind css"],
   },
 ];

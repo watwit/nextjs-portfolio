@@ -50,6 +50,41 @@ p{
   @apply text-base text-quaternary;
 }
 
+.rec-dot {
+  background-color: #29333D !important;
+  box-shadow: 0 0 1px 3px #29333D !important;
+}
+.rec-dot_active {
+  background-color: #E0E6EB !important;
+  box-shadow: 0 0 1px 3px #E0E6EB !important;
+}
+.rec-dot:focus,
+.rec-dot:hover {
+  box-shadow: 0 0 1px 3px #E0E6EB !important;
+}
+.rec-dot_active:focus,
+.rec-dot_active:hover {
+  background-color: #E0E6EB !important;
+  box-shadow: 0 0 1px 3px #E0E6EB !important;
+}
+
+.rec-arrow {
+  
+  background-color: #29333D !important;
+  transition: all 0.3s ease;
+  font-size: 1.1rem !important;
+  color: #E0E6EB !important;
+  width: 1.7rem !important;
+  height: 1.7rem !important;
+  min-width: 1.7rem !important;
+  line-height: 1.7rem !important;
+ 
+}
+
+.rec-arrow:hover:not(:disabled) {
+  transform: scale(1.3);
+}
+
 @layer components{
    .nav-manu{
       @apply w-full border-b-4 border-transparent hover:border-tertiary transition-all ease-in duration-200

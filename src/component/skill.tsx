@@ -1,76 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-type SkillDataType = {
-  id: number;
-  image: string;
-  alt: string;
-  caption: string;
-}[];
-
-const skillData: SkillDataType = [
-  {
-    id: 1,
-    image: "/images/python.png",
-    alt: "python logo",
-    caption: "python",
-  },
-  {
-    id: 2,
-    image: "/images/java.png",
-    alt: "java logo",
-    caption: "java",
-  },
-  {
-    id: 3,
-    image: "/images/javascript.png",
-    alt: "javascript logo",
-    caption: "javascript",
-  },
-  {
-    id: 4,
-    image: "/images/cpp.png",
-    alt: "c++ logo",
-    caption: "c++",
-  },
-  {
-    id: 5,
-    image: "/images/html&css.png",
-    alt: "html&css logo",
-    caption: "html&css",
-  },
-  {
-    id: 6,
-    image: "/images/python.png",
-    alt: "python logo",
-    caption: "python",
-  },
-  {
-    id: 7,
-    image: "/images/java.png",
-    alt: "java logo",
-    caption: "java",
-  },
-  {
-    id: 8,
-    image: "/images/javascript.png",
-    alt: "javascript logo",
-    caption: "javascript",
-  },
-  {
-    id: 9,
-    image: "/images/cpp.png",
-    alt: "c++ logo",
-    caption: "c++",
-  },
-  {
-    id: 10,
-    image: "/images/html&css.png",
-    alt: "html&css logo",
-    caption: "html&css",
-  },
-];
+import { skillData } from "@/data/skill.data";
 
 export default function skill() {
   return (
