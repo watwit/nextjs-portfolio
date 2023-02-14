@@ -2,10 +2,14 @@ import { ProjectType } from "@/interface/project.type";
 export const projectData: ProjectType[] = [
   {
     id: 1,
-    image: "/images/test.jpg",
-    alt: "test",
+    image: "/images/snack-ladder-home.png",
+    alt: "shack ladder home",
+    imagelist: [
+      { image: "/images/snack-ladder-home.png", alt: "shack ladder home" },
+      { image: "/images/snack-ladder-login.png", alt: "shack ladder login" },
+    ],
     type: "1",
-    header: "SNAKE LADDER GAME",
+    header: "Snake Ladder Game",
     details: [
       "The player throws the dice Then walks along the box made according to the points on the dice. If you fall down the stairs, go up to the end of the stairs. If you fall into a box with a snake to descend from the snake's mouth to the snake's tail take turns doing this until reaching the finish line.",
     ],
@@ -13,10 +17,11 @@ export const projectData: ProjectType[] = [
   },
   {
     id: 2,
-    image: "/images/test.jpg",
-    alt: "test",
+    image: "/images/no-image.png",
+    alt: "no image",
+    imagelist: [{ image: "/images/no-image.png", alt: "no image" }],
     type: "1",
-    header: "RESTAURANT MANAGEMENT PROGRAM",
+    header: "Restaurant Management Program",
     details: [
       "Customers can view all food items and the price of food and can add food items that customers order. The system will automatically calculate the total price of the product.",
     ],
@@ -24,10 +29,21 @@ export const projectData: ProjectType[] = [
   },
   {
     id: 3,
-    image: "/images/test.jpg",
-    alt: "test",
+    image: "/images/samo-home.png",
+    alt: "samo home page",
+    imagelist: [
+      { image: "/images/samo-login.png", alt: "samo login page" },
+      { image: "/images/samo-home.png", alt: "samo home page" },
+      { image: "/images/samo-shop.png", alt: "samo shop page" },
+      { image: "/images/samo-activity.png", alt: "samo activity page" },
+      {
+        image: "/images/samo-activity-more.png",
+        alt: "samo activity more page",
+      },
+      { image: "/images/samo-shopping.png", alt: "samo shopping page" },
+    ],
     type: "1",
-    header: "WEB APPLICATION SAMO SYSTEM",
+    header: "Samo System Web Application",
     details: [
       "This is a system for managing the activities of the Faculty of Engineering.",
     ],
@@ -35,10 +51,16 @@ export const projectData: ProjectType[] = [
   },
   {
     id: 4,
-    image: "/images/test.jpg",
-    alt: "test",
+    image: "/images/cpe-drink-login.png",
+    alt: "cpe drink login",
+    imagelist: [
+      { image: "/images/cpe-drink-login.png", alt: "cpe drink login" },
+      { image: "/images/cpe-drink-home.png", alt: "cpe drink home" },
+      { image: "/images/cpe-drink-food.png", alt: "cpe drink food" },
+      { image: "/images/cpe-drink-music.png", alt: "cpe drink music" },
+    ],
     type: "1",
-    header: "MOBILE APPLICATION CPE DRINK",
+    header: "CPE Drink Mobile Application",
     details: [
       "- List, Navigation, Redux, Firebase Authentication, Firebase Firestore, Firebase cloud storage.",
       "- It is a mobile application social network for entertainment is an app designed for use in the pub.",
@@ -47,10 +69,24 @@ export const projectData: ProjectType[] = [
   },
   {
     id: 5,
-    image: "/images/test.jpg",
-    alt: "test",
+    image: "/images/conveyor-home.png",
+    alt: "conveyor home page",
+    imagelist: [
+      { image: "/images/conveyor-home.png", alt: "conveyor home page" },
+      { image: "/images/conveyor-status.png", alt: "conveyor status page" },
+      {
+        image: "/images/conveyor-error-log.png",
+        alt: "conveyor error log page",
+      },
+      {
+        image: "/images/conveyor-error-history.png",
+        alt: "conveyor error history page",
+      },
+      { image: "/images/conveyor-report-1.png", alt: "conveyor report-1 page" },
+      { image: "/images/conveyor-report-2.png", alt: "conveyor report-2 page" },
+    ],
     type: "2",
-    header: "FLOOR/OVERHEAD CONVEYOR MONITORING SYSTEM",
+    header: "Floor/Ovehead Conveyor Monitoring",
     details: [
       "- Show tower lamp status.",
       "- Show active and historical downtime of each asset.",
@@ -61,10 +97,11 @@ export const projectData: ProjectType[] = [
   },
   {
     id: 6,
-    image: "/images/test.jpg",
-    alt: "test",
+    image: "/images/siteoverview.png",
+    alt: "siteoverview.png",
+    imagelist: [{ image: "/images/siteoverview.png", alt: "siteoverview" }],
     type: "2",
-    header: "SITE OVERVIEW",
+    header: "Site Overview",
     details: [
       "- Show process status.",
       "- Visualize production result monthly/yearly trend to benchmark the current date with the previous time frame.",
@@ -73,10 +110,16 @@ export const projectData: ProjectType[] = [
   },
   {
     id: 7,
-    image: "/images/test.jpg",
-    alt: "test",
+    image: "/images/rtppm-home.png",
+    alt: "rtppm home",
+    imagelist: [
+      { image: "/images/rtppm-home.png", alt: "rtppm home" },
+      { image: "/images/rtppm-oee.png", alt: "rtppm oee" },
+      { image: "/images/rtppm-available.png", alt: "rtppm available" },
+      { image: "/images/rtppm-process.png", alt: "rtppm process" },
+    ],
     type: "2",
-    header: "REALTIME PRODUCTION PERFORMANCE MONITORING",
+    header: "Realtime Production Performance Monitoring",
     details: [
       "- Show process status.",
       "- Visualize production result monthly/yearly trend to benchmark the current date with the previous time frame.",
@@ -85,10 +128,15 @@ export const projectData: ProjectType[] = [
   },
   {
     id: 8,
-    image: "/images/test.jpg",
-    alt: "test",
+    image: "/images/amu-home.png",
+    alt: "amu home",
+    imagelist: [
+      { image: "/images/amu-home.png", alt: "amu home" },
+      { image: "/images/amu-equipment.png", alt: "amu equipment" },
+      { image: "/images/amu-drilldown.png", alt: "amu drilldown" },
+    ],
     type: "2",
-    header: "ASSET HEALTH MONITORING",
+    header: "Asset Health Monitoring",
     details: [
       "- Show real-time asset status.",
       "- Show active and historical alarms of each asset.",
@@ -99,10 +147,14 @@ export const projectData: ProjectType[] = [
   },
   {
     id: 9,
-    image: "/images/test.jpg",
-    alt: "test",
+    image: "/images/trace-home.png",
+    alt: "trace home",
+    imagelist: [
+      { image: "/images/trace-home.png", alt: "trace home" },
+      { image: "/images/trace-log.png", alt: "trace log" },
+    ],
     type: "2",
-    header: "PRODUCT TRACEABILITY/QUALITY CONTROL",
+    header: "Product Traceability/Quality Control",
     details: [
       "- Shiftly monitor the controlled parameter in each process.",
       "- Show detail of each out-of-range parameter event in each shift.",
@@ -113,10 +165,15 @@ export const projectData: ProjectType[] = [
   },
   {
     id: 10,
-    image: "/images/test.jpg",
-    alt: "test",
+    image: "/images/swwt-home.png",
+    alt: "swwt home",
+    imagelist: [
+      { image: "/images/swwt-home.png", alt: "swwt home" },
+      { image: "/images/swwt-equipment.png", alt: "swwt equipment" },
+      { image: "/images/swwt-process.png", alt: "swwt process" },
+    ],
     type: "2",
-    header: "SMART WASTEWATER TREATMENT PLANT",
+    header: "Smart Wastewater Treatment Plant",
     details: [
       "- Track key metrics of wastewater treatment plants such as Recycle Rate, Water Quality Index, the unit cost of wastewater treatment.",
       "- Track the status of the machine in the wastewater treatment plant.",
@@ -128,8 +185,12 @@ export const projectData: ProjectType[] = [
     id: 11,
     image: "/images/o2p-home.png",
     alt: "o2p home page",
+    imagelist: [
+      { image: "/images/o2p-home.png", alt: "o2p home page" },
+      { image: "/images/o2p-detail.png", alt: "o2p detail page" },
+    ],
     type: "2",
-    header: "ORDER 2POS",
+    header: "Order 2POS",
     details: [
       "- Sync new orders from Shopping online platform.",
       "- Check the order status.",
@@ -143,8 +204,17 @@ export const projectData: ProjectType[] = [
     id: 12,
     image: "/images/etax-invoice-home.png",
     alt: "etax invoice home page",
+    imagelist: [
+      {
+        image: "/images/etax-invoice-login.png",
+        alt: "etax invoice login page",
+      },
+      { image: "/images/etax-invoice-home.png", alt: "etax invoice home page" },
+      { image: "/images/etax-invoice-news.png", alt: "etax invoice news page" },
+      { image: "/images/etax-invoice-pdpa.png", alt: "etax invoice pdpa page" },
+    ],
     type: "2",
-    header: "E-TAX INVOICE",
+    header: "E-Tax Invoice",
     details: [
       "- Web showing documents to view, print, and download, tax invoices, debit notes, and credit notes.",
       "- Customers can view their own documents.",
@@ -159,8 +229,12 @@ export const projectData: ProjectType[] = [
     id: 13,
     image: "/images/let-dorian.png",
     alt: "let dorian logo",
+    imagelist: [
+      { image: "/images/let-dorian.png", alt: "let dorian logo" },
+      { image: "/images/let-dorian-home.png", alt: "let dorian home" },
+    ],
     type: "2",
-    header: "LET'S DORIAN LOTUS",
+    header: "Let's Dorian Lotus",
     details: [
       "- Application form Let's Dorian.",
       "- View application results and export them as an excel file.",
@@ -169,10 +243,13 @@ export const projectData: ProjectType[] = [
   },
   {
     id: 14,
-    image: "/images/test.jpg",
-    alt: "test",
+    image: "/images/thingworx-overview.png",
+    alt: "thingworx logo",
+    imagelist: [
+      { image: "/images/thingworx-overview.png", alt: "thingworx logo" },
+    ],
     type: "2",
-    header: "THINGWORX IOT PLATFORMS DEVELOPER TRAINER",
+    header: "Thingworx IoT Platforms Developer Trainer",
     details: [
       "- Basic/Advance IoT Developer Training.",
       "- End-User Trainning.",
@@ -184,11 +261,15 @@ export const projectData: ProjectType[] = [
   },
   {
     id: 15,
-    image: "/images/test.jpg",
-    alt: "test",
+    image: "/images/portfolio.png",
+    alt: "portfolio",
+    imagelist: [{ image: "/images/portfolio.png", alt: "portfolio" }],
     type: "1",
-    header: "PORTFOLIO",
-    details: ["- XXXX"],
-    tools: ["next js", "tailwind css"],
+    header: "Portfolio",
+    details: [
+      "- My portfolio develops using Next js, Tailwind CSS, MUI, and Framer motion.",
+      "- Users can see my education history, skills, and work experience.",
+    ],
+    tools: ["next js", "tailwind css", "mui", "framer motion"],
   },
 ];

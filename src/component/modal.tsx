@@ -1,70 +1,109 @@
 import React, { Fragment } from "react";
+import Carousel from "react-elastic-carousel";
+import { ProjectType, ProjectImageType } from "@/interface/project.type";
+import Image from "next/image";
+import styled from "styled-components";
+import { AiOutlineClose } from "react-icons/ai";
 import {
-  Button,
   Dialog,
-  DialogHeader,
-  DialogBody,
-  DialogFooter,
-} from "@material-tailwind/react";
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+} from "@material-ui/core";
 
 type Props = {
   setOpenModal: Function;
+  projectData: ProjectType;
 };
 
-export default function modal({ setOpenModal }: Props) {
+const StyledDialog = styled(Dialog)`
+  .MuiBackdrop-root {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+`;
+
+export default function modal({ setOpenModal, projectData }: Props) {
+  const descriptionElementRef = React.useRef<HTMLElement>(null);
   return (
-    <>
-      {/* <Button onClick={handleOpen} variant="gradient">
-        Open Dialog
-      </Button> */}
-      <Dialog
-        open={true}
-        handler={() => setOpenModal(true)}
-        animate={{
-          mount: { scale: 1, y: 0 },
-          unmount: { scale: 0.9, y: -100 },
-        }}
-        size={"lg"}
-      >
-        <DialogHeader>Its a simple dialog.</DialogHeader>
-        <DialogBody divider className="h-[500px] overflow-y-auto">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus ad
-          reprehenderit omnis perspiciatis aut odit! Unde architecto
-          perspiciatis, dolorum dolorem iure quia saepe autem accusamus eum
-          praesentium magni corrupti explicabo! Lorem, ipsum dolor sit amet
-          consectetur adipisicing elit. Accusamus ad reprehenderit omnis
-          perspiciatis aut odit! Unde architecto perspiciatis, dolorum dolorem
-          iure quia saepe autem accusamus eum praesentium magni corrupti
-          explicabo! Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Accusamus ad reprehenderit omnis perspiciatis aut odit! Unde
-          architecto perspiciatis, dolorum dolorem iure quia saepe autem
-          accusamus eum praesentium magni corrupti explicabo! Lorem, ipsum dolor
-          sit amet consectetur adipisicing elit. Accusamus ad reprehenderit
-          omnis perspiciatis aut odit! Unde architecto perspiciatis, dolorum
-          dolorem iure quia saepe autem accusamus eum praesentium magni corrupti
-          explicabo! Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Accusamus ad reprehenderit omnis perspiciatis aut odit! Unde
-          architecto perspiciatis, dolorum dolorem iure quia saepe autem
-          accusamus eum praesentium magni corrupti explicabo!
-        </DialogBody>
-        <DialogFooter>
-          <Button
-            variant="text"
-            color="red"
-            onClick={() => setOpenModal(false)}
-            className="mr-1"
+    <StyledDialog
+      open={true}
+      onClose={() => setOpenModal(false)}
+      scroll={"paper"}
+      aria-labelledby="scroll-dialog-title"
+      aria-describedby="scroll-dialog-description"
+      PaperProps={{
+        style: { borderRadius: 16 },
+      }}
+    >
+      <div className="bg-primary">
+        <DialogTitle
+          id="scroll-dialog-title"
+          className="font-kanit text-tertiary"
+        >
+          <div className="flex justify-between">
+            <h5>{projectData.header}</h5>
+            <div>
+              <button onClick={() => setOpenModal(false)}>
+                <AiOutlineClose size={25} color={"#fff"} />
+              </button>
+            </div>
+          </div>
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText
+            id="scroll-dialog-description"
+            ref={descriptionElementRef}
+            tabIndex={-1}
           >
-            <span>Cancel</span>
-          </Button>
-          <Button
-            variant="gradient"
-            color="green"
-            onClick={() => setOpenModal(false)}
-          >
-            <span>Confirm</span>
-          </Button>
-        </DialogFooter>
-      </Dialog>
-    </>
+            <Carousel showArrows={false} enableMouseSwipe={false}>
+              {projectData.imagelist.map((data: ProjectImageType) => {
+                return (
+                  <div
+                    style={{ aspectRatio: "16/9" }}
+                    className="overflow-hidden"
+                  >
+                    <Image
+                      className="object-cover cursor-pointer"
+                      src={data.image}
+                      alt={data.alt}
+                      layout="responsive"
+                      width={1920}
+                      height={1080}
+                    />
+                  </div>
+                );
+              })}
+            </Carousel>
+            <ol className="mt-4">
+              {projectData.details.map((detail: string) => {
+                return (
+                  <li
+                    className="mb-3 text-quaternary font-normal text-start font-kanit"
+                    key={detail}
+                  >
+                    {detail}
+                  </li>
+                );
+              })}
+            </ol>
+          </DialogContentText>
+        </DialogContent>
+        <div className="w-full h-[1px] bg-tertiary" />
+        <DialogContent>
+          <div className="flex items-center flex-wrap py-1 gap-2">
+            {projectData.tools.map((tool: string) => {
+              return (
+                <span
+                  className="text-sm font-semibold text-secondary bg-tertiary p-1 rounded-2xl"
+                  key={tool}
+                >
+                  # {tool}
+                </span>
+              );
+            })}
+          </div>
+        </DialogContent>
+      </div>
+    </StyledDialog>
   );
 }

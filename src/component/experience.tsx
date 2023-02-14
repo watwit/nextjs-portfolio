@@ -12,7 +12,7 @@ export default function experience() {
       className="max-w-[1024px] w-full flex justify-center items-center flex-wrap mx-auto p-4 scroll-mt-20 text-center"
     >
       <h2 className="py-4 w-full">Experiences</h2>
-      <p className="pb-4 w-full">xxxxxxxxx</p>
+      <p className="pb-4 w-full">My personal journey</p>
 
       <ol className="relative border-l-[2px] border-white border-dashed m-8">
         <li className="mb-10 ml-2 pl-10 text-left">

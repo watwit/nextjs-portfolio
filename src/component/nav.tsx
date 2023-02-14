@@ -68,7 +68,13 @@ export default function nav() {
                 })}
               </div>
             </AnimateSharedLayout>
-            <button className="btn-tertiary">Download CV</button>
+            <a
+              href="/resume/resume.pdf"
+              download="Resume_วัชรวิทย์ อยู่ทอง.pdf"
+              target="_blank"
+            >
+              <button className="btn-tertiary">Download CV</button>
+            </a>
 
             <div onClick={handleNav} className="lg:hidden">
               <AiOutlineMenu size={25} color={"#fff"} />

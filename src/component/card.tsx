@@ -10,24 +10,25 @@ export default function card({ projectData }: Props) {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <div className="max-w-sm bg-secondary rounded-2xl shadow h-[500px] lg:h-[580px] relative">
-        <div className="overflow-hidden rounded-t-2xl">
+      <div className="max-w-sm bg-secondary rounded-2xl shadow h-[500px] md:h-[580px] relative">
+        <div
+          style={{ aspectRatio: "16/9" }}
+          className="rounded-t-2xl overflow-hidden"
+        >
           <Image
-            className="w-full h-40 lg:h-60 object-cover hover:scale-110 duration-300 cursor-pointer "
-            width={1000}
-            height={1000}
+            className="object-cover hover:scale-110 duration-300 cursor-pointer rounded-t-2xl"
             src={projectData.image}
             alt={projectData.alt}
+            layout="responsive"
+            width={1920}
+            height={1080}
           />
         </div>
-
         <div className="p-5">
-          <a href="#">
-            <h5 className="mb-2 text-xl font-bold tracking-tight">
-              {projectData.header}
-            </h5>
-          </a>
-          <ol className="overflow-y-hidden display-webkit-box text-overflow-ellipsis h-32 lg:h-40">
+          <h5 className="mb-2 text-xl font-bold tracking-tight">
+            {projectData.header}
+          </h5>
+          <ol className="overflow-y-hidden display-webkit-box text-overflow-ellipsis h-32 md:h-40">
             {projectData.details.map((detail: string) => {
               return (
                 <li
@@ -47,7 +48,9 @@ export default function card({ projectData }: Props) {
         </div>
       </div>
 
-      {showModal && <Modal setOpenModal={setShowModal} />}
+      {showModal && (
+        <Modal setOpenModal={setShowModal} projectData={projectData} />
+      )}
     </>
   );
 }

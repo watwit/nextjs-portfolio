@@ -16,7 +16,10 @@ module.exports = withMT({
         'secondary':'#29333D',
         'tertiary':'#E0E6EB',
         'quaternary':'#A3B3C2'
-      }
+      },
+      fontFamily: {
+        'kanit': ['Kanit', 'sans-serif']
+      },
     }
   },
   plugins: [require("daisyui")],

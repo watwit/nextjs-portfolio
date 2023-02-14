@@ -3,8 +3,20 @@ import { MdEmail, MdLocationPin } from "react-icons/md";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { TbSend } from "react-icons/tb";
 import { motion } from "framer-motion";
+import { useForm, SubmitHandler } from "react-hook-form";
+
+interface IFormInput {
+  name: String;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 export default function contract() {
+  const { register, handleSubmit } = useForm<IFormInput>();
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    window.location.href = `mailto:watcharawit.yuthong123@gmail.com?sublect=${data.subject}&body=Hi, my name is ${data.name}. ${data.message} (${data.email})`;
+  };
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -14,7 +26,7 @@ export default function contract() {
       className="max-w-[1024px] w-full flex justify-center items-center flex-wrap mx-auto p-4 scroll-mt-20 text-center"
     >
       <h2 className="py-4 w-full">Contracts</h2>
-      <p className="pb-4 w-full">xxxxxx</p>
+      <p className="pb-4 w-full">Get in touch</p>
 
       <div className="flex justify-center flex-wrap gap-10 w-full my-8">
         <div className="flex flex-col gap-4 items-center">
@@ -35,26 +47,46 @@ export default function contract() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 items-center">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col gap-4 items-center"
+        >
           <h5 className="font-normal">Tell me about you</h5>
+
           <input
-            className="w-full bg-secondary w-[340px] p-4 rounded-2xl"
+            {...register("name")}
+            className=" bg-secondary w-[340px] p-4 rounded-2xl"
             type="text"
             placeholder="Name"
+            required
           />
           <input
-            className="w-full bg-secondary w-[340px] p-4 rounded-2xl"
-            type="text"
+            {...register("email")}
+            className=" bg-secondary w-[340px] p-4 rounded-2xl"
+            type="email"
             placeholder="Email"
+            required
+          />
+          <input
+            {...register("subject")}
+            className=" bg-secondary w-[340px] p-4 rounded-2xl"
+            type="text"
+            placeholder="Subject"
+            required
           />
           <textarea
-            className="w-full bg-secondary w-[340px] p-4 rounded-2xl min-h-[150px]"
+            {...register("message")}
+            className=" bg-secondary w-[340px] p-4 rounded-2xl min-h-[100px]"
             placeholder="Message"
+            required
           />
-          <button className="btn-tertiary w-full p-4 flex justify-center gap-2">
+          <button
+            className="btn-tertiary w-full p-4 flex justify-center gap-2"
+            type="submit"
+          >
             Send message <TbSend size={25} color={"#29333D"} />
           </button>
-        </div>
+        </form>
       </div>
     </motion.div>
   );
