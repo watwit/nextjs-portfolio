@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 interface IFormInput {
-  name: String;
+  name: string;
   email: string;
   subject: string;
   message: string;

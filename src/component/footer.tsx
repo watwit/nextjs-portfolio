@@ -11,9 +11,9 @@ export default function footer() {
         transition={{ duration: 1.5, delay: 0.1 }}
         className="max-w-[1240px] w-full h-full mx-auto px-4 py-10 text-center"
       >
-        <h3>"Thanks for Scrolling"</h3>
+        <h3>Thanks for Scrolling</h3>
 
-        <div className="flex items-center justify-center items-center py-8 gap-8">
+        <div className="flex justify-center items-center py-8 gap-8">
           <Social />
         </div>
 
