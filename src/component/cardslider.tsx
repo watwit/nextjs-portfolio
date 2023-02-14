@@ -8,6 +8,7 @@ export default function cardslider() {
   //   { width: 850, itemsToShow: 2, itemsToScroll: 2 },
   // ];
   return (
+    <div>test</div>
     // <Carousel
     //   breakPoints={breakPoints}
     //   itemPadding={[0, 5]}
@@ -17,10 +18,10 @@ export default function cardslider() {
     //     return <Card projectData={data} key={data.id} />;
     //   })}
     // </Carousel>
-    <Carousel>
-      {projectData.map((data) => {
-        return <Card projectData={data} key={data.id} />;
-      })}
-    </Carousel>
+    // <Carousel>
+    //   {projectData.map((data) => {
+    //     return <Card projectData={data} key={data.id} />;
+    //   })}
+    // </Carousel>
   );
 }
