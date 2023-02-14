@@ -14,7 +14,7 @@ export default function cardslider() {
       enableMouseSwipe={false}
     >
       {projectData.map((data) => {
-        return <Card projectData={data} />;
+        return <Card projectData={data} key={data.id} />;
       })}
     </Carousel>
   );
