@@ -10,7 +10,7 @@ export default function education() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.5, delay: 0.1 }}
       id="education"
-      className="max-w-[1024px] w-full flex justify-evenly items-center flex-wrap mx-auto p-4 text-center scroll-mt-20 min-h-screen flex-col"
+      className="max-w-[1024px] w-full flex justify-center items-center flex-wrap mx-auto p-4 text-center scroll-mt-20 min-h-screen flex-col"
     >
       <div className="w-full">
         <h2 className="py-4 w-full">Educations</h2>
