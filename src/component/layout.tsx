@@ -3,6 +3,7 @@ import Head from "next/head";
 import Nav from "./nav";
 import Footer from "./footer";
 import { motion } from "framer-motion";
+import Scrollbutton from "./scrollbutton";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -19,6 +20,7 @@ export default function layout({ children }: LayoutProps) {
       </Head>
       <Nav />
       {children}
+      <Scrollbutton />
       <Footer />
     </div>
   );
