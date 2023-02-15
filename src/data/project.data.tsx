@@ -183,10 +183,10 @@ export const projectData: ProjectType[] = [
   },
   {
     id: 11,
-    image: "/images/o2p-home.png",
+    image: "/images/o2p-home-page.png",
     alt: "o2p home page",
     imagelist: [
-      { image: "/images/o2p-home.png", alt: "o2p home page" },
+      { image: "/images/o2p-home-page.png", alt: "o2p home page" },
       { image: "/images/o2p-detail.png", alt: "o2p detail page" },
     ],
     type: "2",
