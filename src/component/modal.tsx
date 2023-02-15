@@ -48,7 +48,7 @@ export default function modal({ setOpenModal, projectData }: Props) {
             ref={descriptionElementRef}
             tabIndex={-1}
           >
-            <Carousel showArrows={false} enableMouseSwipe={false}>
+            <Carousel showArrows={false} enableMouseSwipe={false} isRTL={false}>
               {projectData.imagelist.map((data: ProjectImageType) => {
                 return (
                   <div
