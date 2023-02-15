@@ -19,7 +19,6 @@ export default function card({ projectData }: Props) {
             className="object-cover hover:scale-110 duration-300 cursor-pointer rounded-t-2xl"
             src={projectData.image}
             alt={projectData.alt}
-            layout="responsive"
             width={1920}
             height={1080}
           />
