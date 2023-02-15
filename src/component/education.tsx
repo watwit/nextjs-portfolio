@@ -46,7 +46,7 @@ export default function education() {
           <p>- Academic result 5A 2/2019</p>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
@@ -67,7 +67,7 @@ export default function education() {
           <h6 className="mb-3">Sciences and Mathematic</h6>
 
           <p>- Graduated with GPA of 2.89</p>
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.div>
   );
