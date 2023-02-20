@@ -198,7 +198,7 @@ export const projectData: ProjectType[] = [
       "- Add a new distribution channel.",
       "- View reports (Sales report summary, sales statistics, best sellers).",
     ],
-    tools: ["jmix platform", "pgSql"],
+    tools: ["jmix platform", "java", "scss", "pgSql"],
   },
   {
     id: 12,
@@ -223,7 +223,7 @@ export const projectData: ProjectType[] = [
       "- Can use this information to send to the Revenue Department.",
       "- Able to view the document retrospectively Customers can view their own for no more than 6 months and employees can view the past 7 years.",
     ],
-    tools: ["jmix platform", "pgSql"],
+    tools: ["jmix platform", "java", "scss", "pgSql"],
   },
   {
     id: 13,
@@ -239,7 +239,7 @@ export const projectData: ProjectType[] = [
       "- Application form Let's Dorian.",
       "- View application results and export them as an excel file.",
     ],
-    tools: ["jmix platform", "pgSql"],
+    tools: ["jmix platform", "java", "scss", "pgSql"],
   },
   {
     id: 14,
